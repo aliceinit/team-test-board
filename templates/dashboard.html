@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/dashboard.css">
+    <title>TeamTest Dashboard</title>
+</head>
+<body>
+{% include "header.html" %}
+<div class="dashboard">
+    <div class="dashboard-row">
+        <p class="cell">Test Group</p>
+        <p class="cell" style="flex-basis: 100%;">Latest Results</p>
+    </div>
+    {% for test_group, pass_percent, fail_percent in pass_fail_percentages %}
+    <div class="dashboard-row">
+
+
+        <p class="cell test-group-link">{{test_group}}</p>
+        {% if pass_percent > 0 %}
+        <p class="pass-result result cell" style="flex-basis:{{pass_percent *0.8}}%;"></p>
+        {% endif %}
+        {% if fail_percent > 0 %}
+            <p class="fail-result result cell" style="flex-basis:{{fail_percent *0.8}}%;"></p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+</body>

@@ -1,0 +1,36 @@
+.dashboard {
+    display: flex;
+    flex-grow:1;
+    flex-basis:100%;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-content: stretch;
+    background-color: lightgrey;
+}
+
+.dashboard-row {
+    display: flex;
+    justify-content: flex-start;
+    align-content: stretch;
+    padding: 0;
+}
+
+.cell {
+    flex-grow:1;
+    flex-basis:20%;
+
+}
+
+.result {
+    margin: .1rem;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.pass-result {
+    background-color: var(--happy-blue);
+}
+.fail-result {
+    background-color: var(--sad-red);
+}
