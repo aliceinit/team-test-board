@@ -1,0 +1,27 @@
+:root {
+    --happy-blue: #00BFFF;
+    --background-blue: #0053E7;
+    --sad-red: #D10000;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction:column;
+}
+
+.app-header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-blue);
+}
+
+.app-title {
+    color: white;
+    font-size: 2rem;
+}
